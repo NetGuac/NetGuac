@@ -842,12 +842,16 @@ NEARDATA struct permonst mons[] = {
         SIZ(1300, 300, MS_NEIGH, MZ_LARGE), MR_POISON, MR_POISON,
         M1_NOHANDS | M1_HERBIVORE, M2_WANDER | M2_STRONG | M2_JEWELS,
         M3_INFRAVISIBLE, CLR_BLACK),
-     MON("gold unicorn", S_UNICORN, LVL(4, 24, 2, 70, "unaligned"), (G_GENO | 1),
+    #ifdef GOLD_UNI /* I never could get this to work. Align val NULL made it neutral, "unaligned" threw an error, etc.
+           * To quote a dev, "Implementation is left to the interested hacker." 
+           */
+    MON("gold unicorn", S_UNICORN, LVL(4, 24, 2, 70, "unaligned"), (G_GENO | 1),
         A(ATTK(AT_BUTT, AD_PHYS, 1, 12), ATTK(AT_KICK, AD_PHYS, 1, 6),
           NO_ATTK, NO_ATTK, NO_ATTK, NO_ATTK),
         SIZ(1300, 300, MS_NEIGH, MZ_LARGE), MR_POISON, MR_POISON,
         M1_NOHANDS | M1_HERBIVORE, M2_WANDER | M2_STRONG | M2_JEWELS,
         M3_INFRAVISIBLE, CLR_YELLOW),
+    #endif
     MON("horse", S_UNICORN, LVL(5, 20, 5, 0, 0), (G_GENO | 2),
         A(ATTK(AT_KICK, AD_PHYS, 1, 8), ATTK(AT_BITE, AD_PHYS, 1, 3), NO_ATTK,
           NO_ATTK, NO_ATTK, NO_ATTK),
