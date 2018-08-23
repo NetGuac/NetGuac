@@ -29,6 +29,7 @@ static const char *artifact_names[] = {
 #define     FIRE(a,b)   {0,AD_FIRE,a,b}
 #define     ELEC(a,b)   {0,AD_ELEC,a,b}         /* electrical shock */
 #define     STUN(a,b)   {0,AD_STUN,a,b}         /* magical attack */
+#define     MAGM(a,b)   {0,AD_MAGM,a,b}         /* magic missile (artifact.c, line 1226) */
 /* clang-format on */
 
 STATIC_OVL NEARDATA struct artifact artilist[] = {
@@ -41,7 +42,7 @@ STATIC_OVL NEARDATA struct artifact artilist[] = {
      */
 
     /*  dummy element #0, so that all interesting indices are non-zero */
-    A("", STRANGE_OBJECT, 0, 0, 0, NO_ATTK, NO_DFNS, NO_CARY, 0, A_NONE,
+    A("dummy artifact", STRANGE_OBJECT, 0, 0, 0, NO_ATTK, NO_DFNS, NO_CARY, 0, A_NONE,
       NON_PM, NON_PM, 0L, NO_COLOR),
 
     A("Excalibur", LONG_SWORD, (SPFX_NOGEN | SPFX_RESTR | SPFX_SEEK
@@ -258,6 +259,7 @@ A("The Palantir of Westernesse",        CRYSTAL_BALL,
 #undef FIRE
 #undef ELEC
 #undef STUN
+#undef MAGM
 #endif
 
 /*artilist.h*/
