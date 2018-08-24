@@ -138,6 +138,10 @@ STATIC_OVL NEARDATA struct artifact artilist[] = {
      *      2) doesn't give unusual message for 2-headed monsters (but
      *      allowing those at all causes more problems than worth the effort).
      */
+    A("Missilemace", MACE, (SPFX_RESTR | SPFX_BEHEAD), 0, 0,
+      MAGM(5, 1), NO_DFNS, NO_CARY, 0, A_NONE, NON_PM, NON_PM, 4000L,
+      NO_COLOR),
+    
     A("Vorpal Blade", LONG_SWORD, (SPFX_RESTR | SPFX_BEHEAD), 0, 0,
       PHYS(5, 1), NO_DFNS, NO_CARY, 0, A_NEUTRAL, NON_PM, NON_PM, 4000L,
       NO_COLOR),
