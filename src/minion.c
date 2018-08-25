@@ -443,8 +443,13 @@ gain_guardian_angel()
         /* send in some hostile angels instead */
         lose_guardian_angel((struct monst *) 0);
     } else if (u.ualign.record > 8) { /* fervent */
-        pline("A voice whispers:");
-        verbalize("Thou hast been worthy of me!");
+        pline(Hallucination ? "You hear Amy say"
+                                : "A voice whispers:");
+        verbalize(Hallucination ? "Bundlebundlebundle!" 
+                                : "Thou hast been worthy of me!");
+        /* Non-halluc: A voice whispers: "Thou hast been worthy of me!" 
+         * Halluc: You hear Amy say "Bundlebundlebundle!"
+         */
         mm.x = u.ux;
         mm.y = u.uy;
         if (enexto(&mm, mm.x, mm.y, &mons[PM_ANGEL])
