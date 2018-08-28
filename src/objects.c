@@ -109,7 +109,7 @@ OBJECT(OBJ("strange object", None),
 #define S SLASH
 #define B WHACK
 
-/* missiles; materiel reflects the arrowhead, not the shaft */
+/* missiles; material reflects the arrowhead, not the shaft */
 PROJECTILE("arrow", None,
            1, 55, 1, 2, 6, 6, 0,        IRON, -P_BOW, HI_METAL),
 PROJECTILE("elven arrow", "runed arrow",
@@ -1024,7 +1024,7 @@ WAND("sleep",           "runed", 50, 175, 1, RAY, IRON, HI_METAL),
 WAND("death",            "long",  5, 500, 1, RAY, IRON, HI_METAL),
 WAND("lightning",      "curved", 40, 175, 1, RAY, IRON, HI_METAL),
 /* extra descriptions, shuffled into use at start of new game */
-WAND(None,             "forked",  0, 150, 1, 0, WOOD, HI_WOOD),
+WAND("acid",           "forked",  0, 150, 1, 0, WOOD, HI_WOOD),
 WAND(None,             "spiked",  0, 150, 1, 0, IRON, HI_METAL),
 WAND(None,            "jeweled",  0, 150, 1, 0, IRON, HI_MINERAL),
 #undef WAND
