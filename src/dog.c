@@ -179,6 +179,12 @@ makedog()
         if (Role_if(PM_RANGER))
             petname = "Sirius"; /* Orion's dog */
     }
+    
+    if (!*petname && pettype == PM_KITTEN)
+        /* names for cats, only one currently */
+        if (Role_if(PM_FISHERMAN))
+            petname = "Jack"; /* tribute to my cat --FGuac */
+    }
 
     mtmp = makemon(&mons[pettype], u.ux, u.uy, MM_EDOG);
 
