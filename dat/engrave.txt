@@ -86,3 +86,6 @@ Warning, Exploding runes!
 
 # "Whispers Underground" Ben Aaronovitch
 If you can read these words then you are not only a nerd but probably dead.
+
+# xkcd: Five Thirty
+WARNING: stretchy death
