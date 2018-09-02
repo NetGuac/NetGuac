@@ -508,3 +508,9 @@ water lemon
 water melon
 winged grizzly
 yellow wight
+
+# Youtubers
++Jake Paul
++Logan Paul
++Ali-A
++Christian Delgrosso
