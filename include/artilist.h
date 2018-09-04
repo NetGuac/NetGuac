@@ -138,7 +138,7 @@ STATIC_OVL NEARDATA struct artifact artilist[] = {
      *      2) doesn't give unusual message for 2-headed monsters (but
      *      allowing those at all causes more problems than worth the effort).
      */
-    A("The Mace of Sorcery", MACE, (SPFX_RESTR | SPFX_ATTK | SPFX_HSPDAM), 0, 0,
+    A("The Mace of Sorcery", MACE, (SPFX_RESTR | SPFX_ATTK), (SPFX_HSPDAM | SPFX_HPHDAM), 0,
       MAGM(5, 1), NO_DFNS, NO_CARY, 0, A_NONE, NON_PM, NON_PM, 4000L,
       CLR_GRAY),
     
@@ -242,6 +242,11 @@ A("The Palantir of Westernesse",        CRYSTAL_BALL,
       (SPFX_NOGEN | SPFX_RESTR | SPFX_INTEL), (SPFX_EREGEN | SPFX_HSPDAM), 0,
       NO_ATTK, DFNS(AD_MAGM), NO_CARY, CREATE_PORTAL, A_NEUTRAL, PM_WIZARD,
       NON_PM, 4000L, NO_COLOR),
+    
+    A("The Rod of [insert a good name]", QUARTERSTAFF, 
+      (SPFX_NOGEN | SPFX_RESTR | SPFX_INTEL), SPFX_EREGEN, 0, 
+      STUN(3, 4), NO_DFNS, NO_CARY, TAMING, A_NEUTRAL, PM_FISHERMAN,
+      NON_PM, 3000L, CLR_BLUE),
 
     /*
      *  terminator; otyp must be zero
