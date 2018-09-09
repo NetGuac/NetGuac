@@ -42,6 +42,7 @@ STATIC_DCL int FDECL(spell_hit_bonus, (int));
 #define ZT_LIGHTNING (AD_ELEC - 1)
 #define ZT_POISON_GAS (AD_DRST - 1)
 #define ZT_ACID (AD_ACID - 1)
+#define ZT_SONIC_BLAST (AD_SNBM - 1)
 /* 8 and 9 are currently unassigned */
 
 #define ZT_WAND(x) (x)
@@ -60,7 +61,7 @@ const char *const flash_types[] =       /* also used in buzzmu(mcastu.c) */
     {
         "magic missile", /* Wands must be 0-9 */
         "bolt of fire", "bolt of cold", "sleep ray", "death ray",
-        "bolt of lightning", "", "", "", "",
+        "bolt of lightning", "", "stream of acid", "", "",
 
         "magic missile", /* Spell equivalents must be 10-19 */
         "fireball", "cone of cold", "sleep ray", "finger of death",
@@ -70,7 +71,7 @@ const char *const flash_types[] =       /* also used in buzzmu(mcastu.c) */
         "blast of missiles", /* Dragon breath equivalents 20-29*/
         "blast of fire", "blast of frost", "blast of sleep gas",
         "blast of disintegration", "blast of lightning",
-        "blast of poison gas", "blast of acid", "", ""
+        "blast of poison gas", "blast of acid", "blast of sound", ""
     };
 
 /*
@@ -3625,6 +3626,13 @@ struct obj **ootmp; /* to return worn armor for caller to disintegrate */
             acid_damage(MON_WEP(mon));
         if (!rn2(6))
             erode_armor(mon, ERODE_CORRODE);
+        break;
+    case ZT_SONIC_BLAST:
+        if(!(mon->mcanhear)) {
+            sho_shieldeff = TRUE;
+            break;
+        }
+        tmp = d(nd, 6);
         break;
     }
     if (sho_shieldeff)
