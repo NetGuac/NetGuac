@@ -944,6 +944,12 @@ NEARDATA struct permonst mons[] = {
     /*
      * xan, &c
      */
+    MON("checkerbug", S_XAN, LVL(0, 12, 9, 0, 0),
+        (G_GENO | G_SGROUP | G_NOCORPSE | 3),
+        A(ATTK(AT_BITE, AD_PHYS, 1, 1), NO_ATTK, NO_ATTK, NO_ATTK, NO_ATTK,
+          NO_ATTK),
+        SIZ(15, 10, MS_BUZZ, MZ_TINY), MR_POISON, 0, M1_ANIMAL,
+        M2_HOSTILE, M3_INFRAVISIBLE, CLR_MAGENTA),
     MON("grid bug", S_XAN, LVL(0, 12, 9, 0, 0),
         (G_GENO | G_SGROUP | G_NOCORPSE | 3),
         A(ATTK(AT_BITE, AD_ELEC, 1, 1), NO_ATTK, NO_ATTK, NO_ATTK, NO_ATTK,
