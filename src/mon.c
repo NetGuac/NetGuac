@@ -1246,7 +1246,7 @@ long flag;
     int cnt = 0;
     uchar ntyp;
     uchar nowtyp;
-    boolean wantpool, poolok, lavaok, nodiag;
+    boolean wantpool, poolok, lavaok, nodiag, no_ortho;
     boolean rockok = FALSE, treeok = FALSE, thrudoor;
     int maxx, maxy;
     boolean poisongas_ok, in_poisongas;
@@ -1258,6 +1258,7 @@ long flag;
     nowtyp = levl[x][y].typ;
 
     nodiag = NODIAG(mdat - mons);
+    no_ortho = NO_ORTHO(mdat - mons);
     wantpool = mdat->mlet == S_EEL;
     poolok = (is_flyer(mdat) || is_clinger(mdat)
               || (is_swimmer(mdat) && !wantpool));
