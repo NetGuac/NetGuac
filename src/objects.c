@@ -1036,6 +1036,16 @@ WAND(None,            "jeweled",  0, 150, 1, 0, IRON, HI_MINERAL),
            0, COIN_CLASS, prob, 0, 1, worth, 0, 0, 0, 0, 0, HI_GOLD)
 COIN("gold piece", 1000, GOLD, 1),
 #undef COIN
+  
+/* RP1 challenge items */
+#define KEY(name,material,worth,color) \
+    OBJECT(OBJ(name, None),                                        \
+           BITS(0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, P_NONE, material),    \
+           0, KEY_CLASS, 0, 0, 1, worth, 0, 0, 0, 0, 0, color)
+KEY("Copper Key", COPPER, 2000, HI_COPPER),
+KEY("Jade Key", GEMSTONE, 4000, CLR_GREEN),
+KEY("Crystal Key", MINERAL, 8000, HI_GLASS),
+#undef KEY
 
 /* gems ... - includes stones and rocks but not boulders */
 #define GEM(name,desc,prob,wt,gval,nutr,mohs,glass,color) \
