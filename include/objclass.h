@@ -28,7 +28,8 @@ enum obj_material_types {
     PLASTIC,
     GLASS,
     GEMSTONE,
-    MINERAL
+    MINERAL,
+    CRYSTAL
 };
 
 enum obj_armor_types {
