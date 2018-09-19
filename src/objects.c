@@ -1020,7 +1020,7 @@ WAND("digging",          "iron", 55, 150, 1, RAY, IRON, HI_METAL),
 WAND("magic missile",   "steel", 50, 150, 1, RAY, IRON, HI_METAL),
 WAND("fire",        "hexagonal", 40, 175, 1, RAY, IRON, HI_METAL),
 WAND("cold",            "short", 40, 175, 1, RAY, IRON, HI_METAL),
-WAND("sleep",           "runed", 50, 175, 1, RAY, IRON, HI_METAL),
+WAND("sleep",           "runed", 50, 175, 1, RAY, WOOD, HI_WOOD),
 WAND("death",            "long",  5, 500, 1, RAY, IRON, HI_METAL),
 WAND("lightning",      "curved", 40, 175, 1, RAY, IRON, HI_METAL),
 /* extra descriptions, shuffled into use at start of new game */
@@ -1040,10 +1040,10 @@ COIN("gold piece", 1000, GOLD, 1),
 /* RP1 challenge items */
 #define KEY(name,material,worth,color) \
     OBJECT(OBJ(name, None),                                        \
-           BITS(0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, P_NONE, material),    \
-           0, KEY_CLASS, 0, 0, 1, worth, 0, 0, 0, 0, 0, color)
+           BITS(1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, P_NONE, material),    \
+           0, KEY_CLASS, 0, 0, 10, worth, 0, 0, 0, 0, 0, color)
 KEY("Copper Key", COPPER, 2000, HI_COPPER),
-KEY("Jade Key", GEMSTONE, 4000, CLR_GREEN),
+KEY("Jade Key", GEMSTONE, 4000, CLR_BRIGHT_GREEN),
 KEY("Crystal Key", MINERAL, 8000, HI_GLASS),
 #undef KEY
 
