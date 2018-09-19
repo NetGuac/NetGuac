@@ -1570,7 +1570,7 @@ struct permonst _mons2[] = {
         M2_UNDEAD | M2_HOSTILE | M2_MAGIC, M3_WANTSBOOK | M3_INFRAVISION,
         HI_LORD),
     MON("Acererak", S_LICH, LVL(30, 9, -6, 90, -15),
-        (G_HELL | G_GENO | G_NOCORPSE | 1),
+        (G_HELL | G_NOGEN | G_UNIQ | 1),
         A(ATTK(AT_TUCH, AD_COLD, 5, 8), ATTK(AT_MAGC, AD_SPEL, 0, 0), NO_ATTK,
           NO_ATTK, NO_ATTK, NO_ATTK),
         SIZ(1200, 100, MS_MUMBLE, MZ_HUMAN),
