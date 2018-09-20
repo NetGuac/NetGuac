@@ -729,7 +729,7 @@ int alter_type;
 
 static const char dknowns[] = { WAND_CLASS,   RING_CLASS, POTION_CLASS,
                                 SCROLL_CLASS, GEM_CLASS,  SPBOOK_CLASS,
-                                WEAPON_CLASS, TOOL_CLASS, 0 };
+                                WEAPON_CLASS, TOOL_CLASS, KEY_CLASS, 0 };
 
 /* mksobj(): create a specific type of object */
 struct obj *
@@ -941,6 +941,7 @@ boolean artif;
         case VENOM_CLASS:
         case CHAIN_CLASS:
         case BALL_CLASS:
+        case KEY_CLASS:
             break;
         case POTION_CLASS: /* note: potions get some additional init below */
         case SCROLL_CLASS:
