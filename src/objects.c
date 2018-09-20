@@ -1042,9 +1042,9 @@ COIN("gold piece", 1000, GOLD, 1),
     OBJECT(OBJ(name, None),                                        \
            BITS(1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, P_NONE, material),    \
            0, KEY_CLASS, 0, 0, 10, worth, 0, 0, 0, 0, 0, color)
-KEY("Copper Key", COPPER, 2000, HI_COPPER),
+KEY("Copper Key", PLATINUM, 2000, HI_COPPER), /* kludge to disallow corrosion. */
 KEY("Jade Key", GEMSTONE, 4000, CLR_BRIGHT_GREEN),
-KEY("Crystal Key", MINERAL, 8000, HI_GLASS),
+KEY("Crystal Key", CRYSTAL, 8000, HI_GLASS),
 #undef KEY
 
 /* gems ... - includes stones and rocks but not boulders */
