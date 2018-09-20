@@ -222,6 +222,7 @@ int *lo_p, *hi_p; /* output: range that item belongs among */
     case RING_CLASS:
     case WAND_CLASS:
     case VENOM_CLASS:
+    case KEY_CLASS:
         /* entire class */
         *lo_p = bases[ocls];
         for (i = *lo_p; objects[i].oc_class == ocls; i++)
@@ -407,7 +408,7 @@ register int i;
 /* items that should stand out once they're known */
 static short uniq_objs[] = {
     AMULET_OF_YENDOR, SPE_BOOK_OF_THE_DEAD, CANDELABRUM_OF_INVOCATION,
-    BELL_OF_OPENING,
+    BELL_OF_OPENING, COPPER_KEY, JADE_KEY, CRYSTAL_KEY
 };
 
 /* the '\' command - show discovered object types */
