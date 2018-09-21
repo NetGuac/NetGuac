@@ -194,7 +194,7 @@ extern uchar oc_syms[MAXOCLASSES];      /* current class symbols */
 #define BALL_SYM '0'
 #define CHAIN_SYM '_'
 #define VENOM_SYM '.'
-#define KEY_SYM 'π'
+#define KEY_SYM '»'
 
 struct fruit {
     char fname[PL_FSIZ];
