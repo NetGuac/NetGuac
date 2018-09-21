@@ -2,36 +2,38 @@
 # Devin A. Calned
 # aka FlamingGuacamole
 # Skull from bit.ly/2OyhB02
-MAZE:"copperkey",'.'
+MAZE:"copperkey",' '
 #0        1         2         3         4         5         6         7
 #1234567890123456789012345678901234567890123456789012345678901234567890123456
 #subtract 10 from line number to get y-coord
 MAP
                               -----------------
-                           ----               ----
-                          |                       |
-                         |                         |
-                        |                           |
-                       |                             |
-                       |                             |
-                       |    ---------- ----------    |
-                        |   |        | |        |   |
-                        |   |       -- --       |   |
-                        |   --     --   --     --   |
-                        |    -------     -------    |
-                         |           | |           |
-                          |  |-----------------|  | 
-                           | | | | | | | | | | | |
-                           | | - - - - - - - - | |
-                           |  | | | | | | | | |  |
-                           |   ---------------   |
-                            |                   |     
-                             |                 |
+                           ----...............----
+                          |.......................|
+                         |.........................|
+                        |...........................|
+                       |.............................|
+                       |.............................|
+                       |....----------.----------....|
+                        |...|........|.|........|...|
+                        |...|.......--.--.......|...|
+                        |...--.....--...--.....--...|
+                        |....-------.....-------....|
+                         |...........|.|...........|
+                          |..|-----------------|.| 
+                           |.|.|.|.|.|.|.|.|.|.|.|
+                           |.|.-.-.-.-.-.-.-.-.|.|
+                           |..|.|.|.|.|.|.|.|.|..|
+                           |...---------------...|
+                            |...................|     
+                             |.................|
                               -----------------
 STAIR: (38,01),up
+REGION:(x1,y1,x2,y2), lighted, "ordinary"
 MONSTER:'L',"Acererak",(38,19)
 RANDOM_PLACES: (32,09),(44,09)
-OBJECT:('π',"Copper Key"),places[0]
+OBJECT:('»',"Copper Key"),places[0]
+STAIR:places[0],down
 OBJECT:('/',"cancellation"),places[1]
 TRAP:random,random
 TRAP:random,random
@@ -39,3 +41,10 @@ TRAP:random,random
 TRAP:random,random
 TRAP:random,random
 TRAP:random,random
+
+MONSTER:random,random,random
+MONSTER:random,random,random
+MONSTER:random,random,random
+MONSTER:random,random,random
+MONSTER:random,random,random
+MONSTER:random,random,random
