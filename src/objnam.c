@@ -138,6 +138,9 @@ register int otyp;
     case RING_CLASS:
         Strcpy(buf, "ring");
         break;
+    case KEY_CLASS:
+        Strcpy(buf, "Key");
+        break;
     case AMULET_CLASS:
         if (nn)
             Strcpy(buf, actualn);
@@ -668,6 +671,9 @@ unsigned cxn_flags; /* bitmask of CXN_xxx values */
         else
             Sprintf(buf, "%s ring", dn);
         break;
+    case KEY_CLASS:
+            Sprintf(buf, "%s Key", actualn);
+        break;
     case GEM_CLASS: {
         const char *rock = (ocl->oc_material == MINERAL) ? "stone" : "gem";
 
@@ -1136,6 +1142,8 @@ unsigned doname_flags;
         if (obj->owornmask & W_BALL)
             Strcat(bp, " (chained to you)");
         break;
+    default:
+        break;
     }
 
     if ((obj->owornmask & W_WEP) && !mrg_to_wielded) {
@@ -1188,6 +1196,7 @@ unsigned doname_flags;
         case WAND_CLASS:
         case COIN_CLASS:
         case GEM_CLASS:
+        case KEY_CLASS:
             Strcat(bp, " (in quiver pouch)");
             break;
         default: /* odd things */
@@ -1891,7 +1900,7 @@ static const char wrpsym[] = { WAND_CLASS,   RING_CLASS,   POTION_CLASS,
                                SCROLL_CLASS, GEM_CLASS,    AMULET_CLASS,
                                SPBOOK_CLASS, SPBOOK_CLASS, WEAPON_CLASS,
                                ARMOR_CLASS,  TOOL_CLASS,   FOOD_CLASS,
-                               FOOD_CLASS };
+                               FOOD_CLASS, KEY_CLASS };
 
 /* return form of the verb (input plural) if xname(otmp) were the subject */
 char *
